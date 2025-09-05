@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="giftcard.css">
+  <title>Restaurant Gift Card</title>
+</head>
+<body>
+  <div class="gift-card-container">
+    <header>
+      <h1>Restaurant Gift Card</h1>
+      <p>Choose from two options below!</p>
+    </header>
+
+    <div class="options">
+      <button id="sendGiftCardBtn" class="option-btn">Send a Gift Card</button>
+      <button id="checkBalanceBtn" class="option-btn">Check Balance</button>
+    </div>
+
+    <div id="sendGiftCardForm" class="form-container">
+      <h2>Send a Gift Card</h2>
+      <form>
+        <!-- Gift Details -->
+        <h3>Gift Details</h3>
+        <label for="giftAmount">Gift Amount</label>
+        <select id="giftAmount" name="giftAmount" required>
+          <option value="25">$25</option>
+          <option value="50">$50</option>
+          <option value="100">$100</option>
+          <option value="custom">Custom Amount</option>
+        </select>
+
+        <label for="personalMessage">Personal Message</label>
+        <textarea id="personalMessage" name="personalMessage" rows="4" placeholder="Write your message here"></textarea>
+
+        <!-- Recipient Details -->
+        <h3>Recipient Details</h3>
+        <label for="recipientName">Full Name</label>
+        <input type="text" id="recipientName" name="recipientName" placeholder="Recipient's full name" required>
+
+        <label for="recipientPhone">Phone Number</label>
+        <input type="tel" id="recipientPhone" name="recipientPhone" placeholder="Recipient's phone number" required>
+
+        <label for="recipientEmail">Email</label>
+        <input type="email" id="recipientEmail" name="recipientEmail" placeholder="Recipient's email" required>
+
+        <!-- Your Details -->
+        <h3>Your Details</h3>
+        <label for="yourName">Full Name</label>
+        <input type="text" id="yourName" name="yourName" placeholder="Your full name" required>
+
+        <label for="yourPhone">Phone Number</label>
+        <input type="tel" id="yourPhone" name="yourPhone" placeholder="Your phone number" required>
+
+        <label for="yourEmail">Email</label>
+        <input type="email" id="yourEmail" name="yourEmail" placeholder="Your email" required>
+
+        <!-- Payment Details -->
+        <h3>Payment Details</h3>
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+
+        <label for="expiryDate">Expiry Date</label>
+        <input type="month" id="expiryDate" name="expiryDate" required>
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+
+        <button type="submit" class="submit-btn">Send Gift Card</button>
+      </form>
+    </div>
+
+    <div id="checkBalanceForm" class="form-container">
+      <h2>Check Balance</h2>
+      <form>
+        <label for="giftCardNumber">Gift Card Number</label>
+        <input type="text" id="giftCardNumber" name="giftCardNumber" placeholder="Enter your gift card number" required>
+
+        <button type="submit" class="submit-btn">Check Balance</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>Gift cards can be redeemed at any of our restaurant locations.</p>
+    </footer>
+  </div>
+
+  <script src="giftcard.js"></script>
+</body>
+</html>

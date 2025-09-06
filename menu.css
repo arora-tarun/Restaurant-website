@@ -1,72 +1,32 @@
-
-/* Full-screen background image for the Menu page */
-body {
-    background-image: url(img/bg1.jpg); /* Path to your background image */
-    background-size: cover; /* Ensure the image covers the entire screen */
-    background-position: center; /* Center the image */
-    background-repeat: repeat; /* Prevent tiling */
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default body margin */
-    color: white; /* Make text visible */
-  }
-  
-  /* Text styling for visibility on the background */
-  header h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-    font-family: 'Big Shoulders Text', cursive;
-  }
-  
-  /* Container styling for the menu */
-  #menuContainer {
-    padding: 20px;
-    backdrop-filter: blur(6px); /* Adds a slight blur effect */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 50px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to the container */
-  }
-  
-  /* Style for menu categories */
-  .menu-category {
-    text-transform: uppercase;
-    font-size: 1.8em;
-    color: white;
-    margin-bottom: 15px;
-    font-family: 'Big Shoulders Text', cursive;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Text shadow */
-  }
-  
-  /* Style for menu items */
-  .menu-items {
-    list-style-type: none;
+/* Reset */
+* {
+    margin: 0;
     padding: 0;
-    margin-bottom: 30px;
-  }
-  
-  .menu-items li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-family: 'Big Shoulders Text', cursive;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
-  }
-  
-/* navigation */
+    box-sizing: border-box;
+}
 
+/* Body and background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(img/bg1.jpg); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Navigation Bar */
 .nav-flex-row {
     display: flex;
     justify-content: center;
-    position: sticky;
+    position: fixed;   /* always on top */
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
-    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .nav-flex-row li {
@@ -87,4 +47,61 @@ body {
     color: #ff7a59;
     background-color: #ffe5d9;
     border-radius: 5px;
+}
+
+/* Header */
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 80px; /* Leave space for fixed navbar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Big Shoulders Text', cursive;
+}
+
+/* Menu Container */
+#menuContainer {
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 30px auto 50px auto; /* space below header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Categories */
+.menu-category {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Big Shoulders Text', cursive;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Menu Items */
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.menu-items li {
+    display: flex;
+    justify-content: space-between; /* name left, price right */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Big Shoulders Text', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu-items li span.dish-name {
+    flex: 1;
+}
+
+.menu-items li span.dish-price {
+    margin-left: 20px;
+    font-weight: bold;
+    color: #ffd700; /* golden color for price */
 }

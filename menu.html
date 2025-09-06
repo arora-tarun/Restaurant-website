@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menu.css">
-    <title>Menu</title>
-  </head>
-  <body>
-        <nav>
-      <ul class="nav-flex-row">
-        <li class="nav-item">
-          <a href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a href="book.html">Reservation</a>
-        </li>
-        <li class="nav-item">
-          <a href="menu.html">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a href="giftcard.html">Gift Card</a>
-        </li>
-        <li class="nav-item">
-          <a href="#shop">Shop</a>
-        </li>
-      </ul>
-    </nav>
-    <header>
-      <h1>Our Menu</h1>
-    </header>
-    <section class="menu-section">
-      <div id="menuContainer"></div>
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
 
-    <script src="menu.js"></script>
-  </body>
+  <!-- Navigation -->
+  <nav>
+    <ul class="nav-flex-row">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item"><a href="book.html">Reservation</a></li>
+      <li class="nav-item"><a href="menu.html">Menu</a></li>
+      <li class="nav-item"><a href="giftcard.html">Gift Card</a></li>
+      <li class="nav-item"><a href="#shop">Shop</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Our Menu</h1>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menuContainer">
+    <div class="menu-category">Starters</div>
+    <ul class="menu-items">
+      <li>Bruschetta - ₹499</li>
+      <li>Garlic Bread - ₹374</li>
+    </ul>
+
+    <div class="menu-category">Main Course</div>
+    <ul class="menu-items">
+      <li>Grilled Chicken - ₹1079</li>
+      <li>Pasta Alfredo - ₹871</li>
+    </ul>
+
+    <div class="menu-category">Desserts</div>
+    <ul class="menu-items">
+      <li>Chocolate Lava Cake - ₹498</li>
+      <li>Cheesecake - ₹457</li>
+    </ul>
+
+    <div class="menu-category">Drinks</div>
+    <ul class="menu-items">
+      <li>Lemonade - ₹208</li>
+      <li>Iced Tea - ₹208</li>
+      <li>Coffee - ₹249</li>
+    </ul>
+  </section>
+
+</body>
 </html>

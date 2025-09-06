@@ -1,28 +1,63 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-image: url(img/bg2.jpg); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
+/* Navigation Bar */
+.nav-flex-row {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-attachment: fixed; /* Ensures the background stays fixed when scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+.nav-flex-row li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.nav-flex-row li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+
+.nav-flex-row li a:hover {
+    color: #ff7a59;
+    background-color: #ffe5d9;
+    border-radius: 5px;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(img/bg2.jpg); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Booking Container */
 .booking-container {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background to make the text readable */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
+
+    /* Center the box */
+    margin: 100px auto; /* pushes it below the navbar and centers horizontally */
 }
 
 h1 {
@@ -67,38 +102,4 @@ button:hover {
     margin-top: 20px;
     color: #28a745;
     font-size: 18px;
-}
-
-/* navigation */
-
-.nav-flex-row {
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.nav-flex-row li {
-    list-style: none;
-    margin: 0 15px;
-}
-
-.nav-flex-row li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #333;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    transition: all 0.3s;
-}
-
-.nav-flex-row li a:hover {
-    color: #ff7a59;
-    background-color: #ffe5d9;
-    border-radius: 5px;
 }
